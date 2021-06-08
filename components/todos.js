@@ -5,7 +5,6 @@ export default function TodoItem({ item, pressHandle }){
     return(
         <TouchableOpacity onPress={() => pressHandle(item.key)}>
             <Text style={styles.item}>{item.name1}</Text>
-            <Text></Text>
         </TouchableOpacity>
         
     )

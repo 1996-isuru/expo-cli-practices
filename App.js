@@ -39,13 +39,13 @@ export default function App() {
     }}>
     <View style={styles.container}>
       <Header />
+      <AddTodo submitHandler={submitHandler} />
       <FlatList
         data={people}
         renderItem={({ item }) => (
-          <TodoItem item={item} pressHandle={pressHandle} />
+          <TodoItem item={item} pressHandle={pressHandle} style={styles.list} />
         )}
       />
-      <AddTodo submitHandler={submitHandler} />
     </View>
     </TouchableWithoutFeedback>
   );
@@ -53,15 +53,19 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    backgroundColor: "white",
+    flex: 1,
+    backgroundColor: '#fff',
   },
-  item: {
-    marginTop: 24,
-    padding: 30,
-    backgroundColor: "pink",
-    fontSize: 24,
-    marginHorizontal: 10,
-    marginTop: 24,
+  content: {
+    padding: 40,
+    backgroundColor: '#ddd',
+    flex: 1,
+    // fontSize: 24,
+    // marginHorizontal: 10,
+    // marginTop: 24,
   },
+  list: {
+    flex: 1,
+    marginTop: 20,
+  }
 });

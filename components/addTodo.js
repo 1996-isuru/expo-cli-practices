@@ -16,7 +16,7 @@ export default function AddTodo({ submitHandler }) {
         placeholder="New todo.."
         onChangeText={changeHandler}
       />
-      <Button onPress={() => submitHandler(text)} title='add todo' color='corol' />
+      <Button onPress={() => submitHandler(text)} title='add todo' color='#2' />
     </View>
   )
 }
@@ -28,5 +28,6 @@ const styles = StyleSheet.create({
         paddingVertical: 6,
         borderBottomColor: '#ddd',
         borderBottomWidth: 1
+        // backgroundColor: 'coral'
     }
 })
